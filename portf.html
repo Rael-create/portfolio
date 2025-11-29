@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WAMAYARAELACHIENG' — Web Development Enthusiast</title>
+  <link rel="stylesheet" href="port.css">
+</head>
+<body>
+  <header>
+    <h1>WAMAYA RAEL ACHIENG'</h1>
+    <h2>Web Development Enthusiast</h2>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h3>About Me</h3>
+    <p>I am a software developer who builds responsive and user‑friendly applications.</p>
+  </section>
+
+  <section id="skills">
+    <h3>Skills</h3>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Git</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h3>Projects</h3>
+    <div class="project">Responsive Portfolio Website</div>
+    <div class="project">Retail Price Optimizer (Python ML Model)</div>
+    <div class="project">Landing Page Design</div>
+  </section>
+
+  <section id="contact">
+    <h3>Contact</h3>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Rael Wamaya" required>
+      <input type="email" id="email" placeholder="rael.wamaya@gmail.com" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Made by WAMAYARAELACHIENG' © 2025</p>
+  </footer>
+
+  <!-- JavaScript inside HTML -->
+  <script>
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const msg = document.getElementById('message').value;
+
+      const mailto = `mailto:rael.wamaya@gmail.com?subject=Portfolio Message from ${name}&body=${msg}%0A%0AFrom: ${email}`;
+      window.location.href = mailto;
+    });
+  </script>
+</body>
+</html>
